@@ -1,0 +1,88 @@
+:root{
+  --highlight: #ff0;
+}
+
+#gridcontainer{
+  margin:0;
+  padding:0;
+  display: grid;
+}
+
+.grid{
+display:grid;
+grid-template-columns: 1.6fr 2fr;
+grid-template-rows: auto;
+grid-gap:2rem;
+margin-top: 2rem;
+}
+
+#gridoptions div, #celloptions div{
+  display: flex;
+  justify-content: space-between;
+  padding:.2rem;
+}
+
+#gridoptions div span, #celloptions div span{
+  flex-basis: 50%;
+  justify-content: flex-end;
+}
+
+#gridcssdisplay, #cellcssdisplay{
+  min-height: 20rem;
+  padding: 0 1rem 1rem 1rem;
+  overflow-y: auto;
+  position: relative;
+  color:#fff;
+}
+
+#gridcssdisplay div, #cellcssdisplay div{
+  font-family: courier new;
+  font-size:1.4rem;
+}
+
+
+#gridcssdisplay h2, #cellcssdisplay h2{
+  margin: .5rem 0 .2rem 0;
+  font-size:1.8rem;
+  text-transform: capitalize;
+}
+
+option{
+font-family: monospace;
+font-weight: bold;
+}
+
+input[type=text]{
+  width:100%;
+  font-family: monospace;
+}
+
+textarea{
+  width:100%;
+  height:55px;
+  font-family: monospace;
+}
+
+div.eldiv{
+    border:1px solid #000;
+    background-color:#444;
+    padding: .5rem;
+    cursor:pointer;
+}
+
+div.eldiv.active{
+background: linear-gradient(to right,  rgba(255,255,136,1) 1px,rgba(0,0,0,0) 0);
+}
+
+footer{
+  margin-top:4rem;
+}
+
+@media all and (max-width: 800px)  {
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  #gridcssdisplay, #cellcssdisplay{
+    padding: 0;
+  }
+}

@@ -1,0 +1,197 @@
+<!doctype html>
+<html> 
+
+<head>
+  <title>CSS Variables</title>
+
+<meta charset="utf-8" http-equiv="encoding">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <link href="" rel="stylesheet" >
+
+  <style>
+
+  /* VARIABLE DECLARATIONS */
+    :root{
+      --hot: #ff3636;
+      --day: #fff;
+      --night: #000;
+      --dark: #444;
+      --dim: #888;
+      --light: #aaa;
+      --bright: #eee;
+      --warm: #fea;
+      font-family: sans-serif;
+      font-size: 10px;
+      box-sizing: border-box;
+      margin:0;
+    }
+
+    html, body{
+      background-color: var(--dark);
+    }
+
+    #boxes{
+      --grid-column-widths: 1fr 1fr;
+    }
+
+
+/* STYLES */
+
+    nav{
+      text-align: center;
+      margin:1rem auto;
+    }
+
+    a{
+      font-size: 2rem;
+      color: var(--hot);
+      font-weight: bold;
+      margin: 0 2rem;
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: var(--warm);
+      text-shadow: 1px 2px var(--night);
+    }
+
+    h1{
+      text-align: center;
+      color: var(--day);
+      font-size: 4rem;
+      text-shadow: 1px 2px var(--night);
+    }
+
+    #boxes{
+      max-width:800px;
+      margin:auto;
+      display: grid;
+      grid-template-columns: var(--grid-column-widths);
+      /*grid-template-rows: auto;*/
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+      grid-auto-rows: minmax(10rem, auto);
+    }
+
+    #boxes div{
+        padding: 2rem;
+        border: 1px solid var(--night);
+        background-color: var(--dim);
+        text-align: center;
+    }
+
+    #boxes h2{
+      margin:0 auto 1rem auto;
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--bright);
+    }
+
+    #boxes button{
+      border:1px solid var(--dark);
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      color: var(--night);
+      background-color: var(--light);
+      margin:auto;
+      cursor:pointer;
+    }
+
+    #boxes button:hover{
+      background-color: var(--warm);
+      border-color: var(--day);
+      box-shadow: 0 0 .5rem 0 var(--night);
+    }
+
+    /* Style Variable Overrides */
+    .special{
+      --night: #010;
+      --dark: #040;
+      --dim: #080;
+      --light: #0a0;
+      --bright: #0f0;
+      --warm: #afa;
+      --day: #060;
+    }
+
+    /* Media Queries */
+    @media all and (max-width: 450px){
+
+      html,body{
+        --dark: #003;
+      }
+
+      #boxes{
+        /* changing column behavior using css variable instead of property value */
+        --grid-column-widths: 1fr;
+      }
+    }
+
+
+  </style>
+
+  <script type="text/javascript">
+
+    /* programically changing css variable with JS*/
+    function switchStyles(which){
+      var root = document.querySelector(':root');
+      var rootStyles = getComputedStyle(root);
+      var hot = rootStyles.getPropertyValue('--hot');
+      root.style.setProperty("--dim", "#09f");
+      console.log('box clicked: ', which);
+    }
+
+$(function(){
+    $("#boxes button").on("click", function(e){
+      var boxparent = $(this).closest("div");
+      var isspecial = boxparent.hasClass("special");
+      if(!isspecial){
+        var boxid = boxparent.attr("id");
+        switchStyles(boxid);
+      }
+    });
+});
+
+  </script>
+
+</head>
+
+<body>
+
+<nav><a href="index.htm">HOME</a><a href="about.htm">ABOUT</a><a href="CONTACT">CONTACT</a></nav>
+
+
+<div id="content">
+  <h1>CSS Variables and New Features</h1>
+
+    <div id="boxes">
+      <div id="box1">
+          <h2>Project A</h2>
+          <button>LEARN MORE</button>
+      </div>
+      <div id="box2" class="special">
+          <h2>Project B</h2>
+          <button>LEARN MORE</button>
+      </div>
+      <div id="box3">
+          <h2>Project C</h2>
+          <button>LEARN MORE</button>
+      </div>
+      <div id="box4">
+          <h2>Project D</h2>
+          <button>LEARN MORE</button>
+      </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

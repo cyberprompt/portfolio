@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,html{
+  background-color: #333;
+  color: #ddd;
+  font-size:10px;
+}
+
+main{
+  font-size: 1.5rem;
+}
+
+ul{
+  background-color: #777;
+}
+
+h2 span{
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+li{
+  border:1px solid #000;
+  background-color:#444;
+  margin: .5rem;
+  padding: .5rem;
+}

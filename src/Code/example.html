@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>  
+    <script>hljs.initHighlightingOnLoad();</script>
+        
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ed Murphy Code Examples: 2022"/>    
+
+    <title></title>
+  </head>
+  <body>
+    
+
+    <!-- DISPLAY CODE EXAMPLE HERE -->
+    <pre><code>
+        import {useState, useEffect} from "react";
+        import {useParams} from "react-router-dom";
+        import "./Trivial.css";
+        import Header from "./components/Header";
+        import Footer from "./components/Footer";
+        import OptionsForm from "./components/OptionsForm";
+        import Question from "./components/Question";
+        import Error from "./components/Error";
+        import Delete from "./components/Delete";
+        import Summary from "./components/Summary";
+        import {nanoid} from "nanoid";
+        // custom js inclusion functions
+        import {clean} from "./utilities"
+        
+        
+        function App(){
+        
+            const [gameStart, setGameStart] = useState(false);      // after options submitted
+            const [gameOver, setGameOver] = useState(false);        // game completed, notify total and continue options
+            const [gameError, setGameError] = useState(false);      // general trigger (true) to notify user/restart game
+            const [deleteData, setDeleteData] = useState(-1);       // set to 0 for all data deletion, 1 for player deletion, 2 for postDelete confirmation
+            const [questionsData, setQuestionsData] = useState([]);    // game question data JSON
+            const [optionsData, setOptionsData] = useState({
+                categoryinput: "",
+                typeinput: "",
+                difficultyinput: "",
+                amountinput : 1
+            });
+            // Player and Options Data set by localstorage if exists ** TO DO **
+            const [playerData, setPlayerData] = useState({player:"", questions:0, answered:0, correct:0, score:0, options: optionsData });   // player name #questions/correct answers and total score 
+            const [playerTotals, setPlayerTotals] = useState({totalquestions:0, totalcorrect:0, totalscore:0});   // updated by useEffect to combine current game and previous game totals (used in Summary)
+            const [pastPlayers, setPastPlayers] = useState([]);
+            const routerparams = useParams(); 
+        
+            useEffect(()=> {	
+            /** Set the environment for this App's CSS to be dominant on unreachable dom elements **/
+            document.querySelector("html").setAttribute("id",routerparams.APPNAME);
+            document.querySelector("body").classList = "";  // remove any previous classes added
+            document.querySelector("body").classList.add(routerparams.APPNAME);
+            document.title = `${routerparams.APPNAME} Demo App : 2022 Ed Murphy`;   // set a title for this app
+            },[routerparams.APPNAME]);
+        
+    </code></pre>
+
+  </body>
+</html>

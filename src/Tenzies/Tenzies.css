@@ -1,0 +1,171 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+}
+
+
+
+html#TENZIES body.TENZIES{
+    font-size:1.4rem;
+    font-family: Poppins, sans-serif;
+}
+
+
+html#TENZIES body.TENZIES h1{ 
+    font-size: 3rem; margin:0;     
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    text-shadow: rgb(0, 0, 0) 0 2px 3px;
+    letter-spacing: 2px;   
+}
+
+html#TENZIES body.TENZIES p{margin:0;}
+
+html#TENZIES body.TENZIES #container{
+    width:40rem;
+    margin:auto;
+    background-color: #000;
+    padding:1.5rem;
+    user-select: none;
+}
+
+html#TENZIES body.TENZIES main{
+    background-color: rgb(206, 222, 240);
+    border-radius: 1rem;
+    padding:3rem;
+    text-align: center;
+    margin:0;
+}
+
+html#TENZIES body.TENZIES main.win{
+    background: rgb(173, 255, 207);
+}
+
+html#TENZIES body.TENZIES main.error{
+    background: darkred;
+}
+
+html#TENZIES body.TENZIES #instrux{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-size: 1.6rem;
+}
+
+html#TENZIES body.TENZIES #dicedisplay{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 3rem 0;
+}
+
+html#TENZIES body.TENZIES .dice{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    text-align: center;
+    font-weight: bold;    
+    font-size: 4rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px #999;
+    cursor: pointer;
+}
+
+html#TENZIES body.TENZIES .dice.on{
+    background-color:springgreen;
+    border: 2px solid black;    
+}
+
+html#TENZIES body.TENZIES .dice.error{   
+    background-color:rgb(255, 0, 0);
+    border: 2px solid black;    
+}
+
+
+html#TENZIES body.TENZIES button#roll{
+    border:0;
+    color:#fff;
+    padding:.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Inter;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px #999;
+    cursor: pointer;    
+    background-color: royalblue;
+    width:auto;
+}
+
+html#TENZIES body.TENZIES button#newgame{
+    border:0;
+    background-color: darkgreen;
+    color:#fff;
+    padding:.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Inter;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px #999;
+    cursor: pointer;
+    width:auto;
+}
+
+html#TENZIES body.TENZIES #score{
+    font-weight: bold;
+    font-size: 2rem;
+    color:slateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-family: Poppins, sans-serif !important;
+}
+
+html#TENZIES body.TENZIES #gamemessage{
+    font-weight: bold;
+    font-size: 1.7rem;
+    color:slateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+html#TENZIES body.TENZIES #gamemessage.win{
+    color:green;
+}
+
+html#TENZIES body.TENZIES #gamemessage.lose{
+    color: #fff;
+}
+
+
+  /** View Code Bug **/
+  html#TENZIES body.TENZIES .viewcodeicon{
+    position:fixed;
+    right:3rem;
+    bottom:4rem;
+    display: flex;
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: #ffffff;  
+    box-shadow: -1px -1px 2px #777;  
+    color: #000;
+    cursor: pointer;
+  }
+  
+  html#TENZIES body.TENZIES .viewcodeicon img{
+    display:inline-block;
+    width:3rem;
+  }

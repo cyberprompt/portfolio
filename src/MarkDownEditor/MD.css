@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+html#MD body.MD {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+html#MD body.MD main{
+    margin-left: 40px;
+}
+
+html#MD body.MD button:focus {
+    outline: none;
+}
+
+html#MD body.MD .ql-editor p,
+html#MD body.MD .ql-editor.ql-blank::before {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+html#MD body.MD .pane {
+    overflow-y: auto;
+}
+
+html#MD body.MD .sidebar {
+    width: 20%;
+    height: 100vh;
+}
+
+html#MD body.MD .sidebar--header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+html#MD body.MD .sidebar--header > h3 {
+    font-size: 2rem;
+}
+
+html#MD body.MD .sidebar-row{
+    display: flex;
+    align-items: center;
+}
+
+html#MD body.MD .sidebar-row img{
+    cursor: pointer;
+    padding:0 .5rem;
+    display: none;
+}
+
+html#MD body.MD .sidebar-row img.show{
+    display: inline-block;
+}
+
+html#MD body.MD .new-note {
+    cursor: pointer;
+    background-color: #4A4E74;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+}
+
+html#MD body.MD .first-note {
+    cursor: pointer;
+    background-color: #4A4E74;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+html#MD body.MD .editor {
+    width: 80%;
+    height: 100vh;
+}
+
+html#MD body.MD .title {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+html#MD body.MD .title--delete {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+html#MD body.MD .title:hover .title--delete {
+    display: block;
+}
+
+html#MD body.MD .note-summary:not(:last-of-type) {
+    border-bottom: 1px solid lightgray;
+}
+
+html#MD body.MD .text-snippet {
+    padding-inline: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #4A4E74;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+html#MD body.MD .selected-note {
+    background-color: #4A4E74;
+}
+
+html#MD body.MD .selected-note .text-snippet {
+    color: white;
+    font-weight: 700;
+}
+
+html#MD body.MD .gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+html#MD body.MD .gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+html#MD body.MD .gutter.gutter-horizontal:hover {
+    cursor: col-resize;
+}
+
+html#MD body.MD .split {
+    display: flex;
+}
+
+html#MD body.MD .no-notes {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+html#MD body.MD .flexbuttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+html#MD body.MD .custom-ui h2{
+    display: inline-block;
+    margin:0 0 1rem;
+}
+html#MD body.MD .custom-ui{
+    padding:2rem;
+    text-align: center;
+    border:1px solid rgb(92, 37, 37);
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgb(92, 37, 37);
+}
+
+/** View Code Bug **/
+html#MD body.MD .viewcodeicon{
+    position:fixed;
+    right:3rem;
+    bottom:4rem;
+    display: flex;
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: #ffffff;  
+    box-shadow: -1px -1px 2px #777;  
+    color: #000;
+    cursor: pointer;
+  }
+
+  html#MD body.MD .viewcodeicon img{
+    display:inline-block;
+    width:3rem;
+  }

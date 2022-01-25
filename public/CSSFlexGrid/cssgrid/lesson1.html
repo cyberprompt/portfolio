@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Grid</title>
+    <meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../common.css" >
+    <link rel="stylesheet" type="text/css" href="../grid.css" >
+  </head>
+
+  <body>
+
+    <main>
+
+    <div id="gridcontainer">
+      <!-- populated on load and button clicks -->
+    </div>
+
+    </main>
+
+
+  <footer>
+  <div class="grid" id="gridoptionsGrid">
+    <!-- Grid Options 1 -->
+    <div id="gridoptions">
+        <div>
+          <span>GRID ELEMENTS</span>
+          <span><select id="elselect">
+            <!-- Dynamic -->
+          </select></span>
+        </div>
+        <div>
+          <span>GRID-TEMPLATE-COLUMNS</span>
+          <span><input type="text" id="grid-template-columns" value="repeat(3,1fr)"/></span>
+        </div>
+        <div>
+          <span>GRID-TEMPLATE-ROWS</span>
+          <span><input type="text" id="grid-template-rows" value="auto"/></span>
+        </div>
+        <div>
+          <span>GRID-AUTO-ROWS</span>
+          <span><input type="text" id="grid-auto-rows" value="auto"/></span>
+        </div>
+        <div>
+          <span>GRID-GAP</span>
+          <span><input type="text" id="gap" value="5px"/></span>
+        </div>
+        <div>
+          <span>GRID-TEMPLATE-AREAS</span>
+          <span><textarea type="text" id="grid-template-areas" placeholder="Quote areas on each line"></textarea></span>
+        </div>
+        <div>
+          <span>GRID-AUTO-FLOW</span>
+          <span><input type="text" id="grid-auto-flow" value="row"/></span>
+        </div>
+        <div>
+          <span>CUSTOM GRID CSS</span>
+          <span><textarea id="grid-custom-css" placeholder="property:value;"></textarea></span>
+        </div>
+    </div>
+
+    <!-- Grid CSS Display 2 -->
+    <div id="gridcssdisplay">
+      <h2>Grid Computed properties</h2>
+      <div><!-- dynamic --></div>
+    </div>
+
+  </div>
+
+    <!-- Cell Options 3 -->
+  <div class="grid" id="celloptionsGrid" style="display:none;">
+
+    <div id="celloptions">
+      <div>
+        <span>GRID-COLUMN</span>
+        <span><input type="text" id="grid-column" value=""/></span>
+      </div>
+      <div>
+        <span>GRID-ROW</span>
+        <span><input type="text" id="grid-row" value=""/></span>
+      </div>
+      <div>
+        <span>GRID-AREA</span>
+        <span><input type="text" id="grid-area" value=""/></span>
+      </div>
+      <div>
+        <span>CUSTOM CELL CSS</span>
+        <span><textarea id="cell-custom-css" placeholder="property:value;"></textarea></span>
+      </div>
+      <div>
+        <span>CUSTOM CELL HTML</span>
+        <span><textarea id="cell-custom-html" placeholder=""></textarea></span>
+      </div>
+    </div>
+
+    <!-- Cell CSS Display 4 -->
+    <div id="cellcssdisplay">
+      <h2><!-- dynamic --></h2>
+      <div><!-- dynamic --></div>
+    </div>
+
+  </div>
+
+  </footer>
+
+</body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../numbertowords.js"></script>
+    <script src="./grid.js"></script>
+
+</html>

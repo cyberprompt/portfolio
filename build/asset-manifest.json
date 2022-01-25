@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7701e14b.chunk.css",
+    "main.js": "/static/js/main.bce6381b.chunk.js",
+    "main.js.map": "/static/js/main.bce6381b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.77a58105.js",
+    "runtime-main.js.map": "/static/js/runtime-main.77a58105.js.map",
+    "static/css/2.d2444bc1.chunk.css": "/static/css/2.d2444bc1.chunk.css",
+    "static/js/2.e9ec2f56.chunk.js": "/static/js/2.e9ec2f56.chunk.js",
+    "static/js/2.e9ec2f56.chunk.js.map": "/static/js/2.e9ec2f56.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.d2444bc1.chunk.css.map": "/static/css/2.d2444bc1.chunk.css.map",
+    "static/css/main.7701e14b.chunk.css.map": "/static/css/main.7701e14b.chunk.css.map",
+    "static/js/2.e9ec2f56.chunk.js.LICENSE.txt": "/static/js/2.e9ec2f56.chunk.js.LICENSE.txt",
+    "static/media/greece.ace522b4.jpg": "/static/media/greece.ace522b4.jpg",
+    "static/media/Intro.css": "/static/media/lightgrain-bak.c0ed707d.png",
+    "static/media/memeimg.6d8bf894.png": "/static/media/memeimg.6d8bf894.png",
+    "static/media/sanfran.5a641213.jpg": "/static/media/sanfran.5a641213.jpg",
+    "static/media/turkscaicos.95cbd5ff.jpg": "/static/media/turkscaicos.95cbd5ff.jpg",
+    "static/media/Trivial.css": "/static/media/yuno.72f7bffb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.77a58105.js",
+    "static/css/2.d2444bc1.chunk.css",
+    "static/js/2.e9ec2f56.chunk.js",
+    "static/css/main.7701e14b.chunk.css",
+    "static/js/main.bce6381b.chunk.js"
+  ]
+}

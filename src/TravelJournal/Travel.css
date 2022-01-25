@@ -1,0 +1,127 @@
+:root{
+    font-size:10px;
+    color: #000;
+    --pagebg: #e5e5e5;
+    --popcolor: #F55A5A;
+  }
+  
+  *, ::before, ::after{
+    box-sizing: border-box;
+  }
+
+  html#TRAVEL body.TRAVEL{
+    font-family: Inter, sans-serif;
+      background-color: var(--pagebg);
+      margin:5rem auto;
+  }
+
+  html#TRAVEL body.TRAVEL #container{
+      width: 55rem;
+      min-height: 64rem;
+      margin:auto;
+      margin-top: 3rem;
+      background-color: ivory;  
+      border-radius: 1.2rem;    
+      overflow:hidden;
+      box-shadow: 0 1px 3px 3px rgb(209, 209, 209);
+  }
+
+  html#TRAVEL body.TRAVEL #header{
+      padding: 1.4rem;
+      background-color: var(--popcolor);
+  }
+
+  html#TRAVEL body.TRAVEL nav{    
+    display:flex;
+    flex-direction: row;
+    color: #fff;  
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  html#TRAVEL body.TRAVEL nav img#navicon{
+      visibility: visible;
+  }
+
+  html#TRAVEL body.TRAVEL main{
+      padding:4rem;
+  }
+
+  html#TRAVEL  body.TRAVEL #entries{
+      display: flex;
+      flex-direction: column;
+      gap:4rem;
+  }
+
+  html#TRAVEL body.TRAVEL .entry{
+      display: flex;
+      gap: 2rem;
+  }
+
+  html#TRAVEL body.TRAVEL .entryimg{
+      width:12.5rem;
+      height:16.8rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 1rem;
+      box-shadow: 2px 2px 7px 0px rgb(209 209 209);   
+      overflow: hidden;   
+  }
+
+  html#TRAVEL body.TRAVEL img.travelimg{
+      width: inherit;
+      height: inherit;
+  }
+
+  html#TRAVEL body.TRAVEL .detail{
+      margin-top: 2rem;
+  }
+
+  html#TRAVEL body.TRAVEL .detail h1{
+      margin-top:.5rem;
+  }
+
+  html#TRAVEL body.TRAVEL .locdetail{
+      display: flex;
+      align-items: center;
+  }
+
+  html#TRAVEL body.TRAVEL .locdetail img{
+      margin-right:.5rem;
+  }
+
+  html#TRAVEL body.TRAVEL .locdetail span{
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      margin-right: 1rem;
+  }
+
+  html#TRAVEL body.TRAVEL .locdetail a{
+      color: gray;
+  }
+
+  html#TRAVEL body.TRAVEL .locdates{
+      font-weight: 600;
+  }
+
+  /** View Code Bug **/
+  html#TRAVEL body.TRAVEL .viewcodeicon{
+    position:fixed;
+    right:3rem;
+    bottom:4rem;
+    display: flex;
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: #ffffff;  
+    box-shadow: -1px -1px 2px #777;  
+    color: #000;
+    cursor: pointer;
+  }
+
+  html#TRAVEL body.TRAVEL .viewcodeicon img{
+    display:inline-block;
+    width:3rem;
+  }
+

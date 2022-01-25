@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flexbox and Grid</title>
+    <meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+  <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">   
+    <!-- Karla Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&display=swap" rel="stylesheet">      
+     
+    <link rel="stylesheet" type="text/css" href="./index.css" >
+    <link rel="stylesheet" type="text/css" href="../PublicNav.css" >
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <!-- Site Navigation Data -->
+
+    <script>
+    $(function(){
+      fetch("/NavData.json")
+      .then(response => response.json())
+      .then(data => {
+          const reactlinks = data.reactlinks;
+          const divider = data.divider;
+          const htmllinks = data.htmllinks;
+          const alllinks = reactlinks.concat(divider,htmllinks);
+          let output = "";
+          
+          $.each(alllinks, function(idx,obj){
+
+            let linkicons = "";
+            $.each(obj.icons, function(idx,val){
+                linkicons += `<img src="/img/${val}"></img>`;
+            });
+
+            if(obj.id !== "divider"){
+              output+= `<li>
+                          <a id="navlink${obj.id}" href="/#${obj.link}">${obj.text}</a>
+                          <div class="navlink" data-for="navlink${obj.id}">
+                            ${obj.summary}
+                            <div class="navicons">${linkicons}</div>
+                          </div>
+                        </li>`;
+            }else{
+              output+= `<li class="divider">${obj.text}</li>`;            
+            }
+          });
+          $("#sitenav ul.nav").html(output);
+
+          /** menu animations **/
+          $("#sitenav.menu").on("mouseenter", function(){
+            $(this).addClass("animateprimary").removeClass("animatesecondary");
+            $("#sitenav.menu .title").addClass("animateprimary").removeClass("animatesecondary");
+          });
+          $("#sitenav.menu").on("mouseleave", function(){
+            $(this).removeClass("animateprimary").addClass("animatesecondary");
+            $("#sitenav.menu .title").removeClass("animateprimary").addClass("animatesecondary");
+          });          
+
+          /** link animations **/
+          $("#sitenav a").on("mouseenter", function(){
+            $(".navlink[data-for=" + $(this).attr("id") + "]").addClass("animateprimary").removeClass("animatesecondary");
+          });
+          $("#sitenav a").on("mouseleave", function(){
+            $(".navlink[data-for=" + $(this).attr("id") + "]").removeClass("animateprimary").addClass("animatesecondary");
+          });
+
+      });
+    });      
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="sitenav" class="menu">
+      <div class="title">Portfolio Navigation <span>&middot;&middot;&middot;</span></div>
+      <ul class="nav">links go here</ul>  
+      
+      <!-- VIEW CODE NOT IMPLEMENTED ON NON-REACT AREAS (MAYBE LATER) -->
+      <!-- div class="viewcodeicon" title="View Navigation Code">
+        <img src="/img/viewcode-icon.png" alt="View Navigation Code"/> 
+        <span>view<br/>code</span>
+      </div -->              
+
+    </div>
+
+    <main>
+      <h1>CSS Concepts</h1>
+      <ul>
+
+        <li class="title">FLEXBOX (display: flex)
+          <ul id="FLEXlessonlist">
+            <!-- Dynamic Elements -->
+          </ul>
+        </li>
+
+        <li class="title">CSS GRID (display: grid)
+            <ul id="GRIDlessonlist">
+              <!-- Dynamic Elements -->
+            </ul>
+          </li>
+
+      </ul>
+    </main>
+
+  </body>
+
+<footer>
+  <script>
+    $(function(){
+      const flexlessons = [
+        "FLEX-DIRECTION",
+        "FLEX-WRAP",
+        "JUSTIFY-CONTENT / ALIGN-ITEMS",
+        "FLEX-BASIS"
+      ];
+
+      var Fels = "";
+      for(i=0;i<flexlessons.length;i++){
+        let n = i + 1;
+        Fels += `<li class='lesson'>
+          <div>
+          <a href='#' data-id='FL${n}'>${flexlessons[i]}</a>
+          <span href='#' class='newwin' data-href='./flexbox/lesson${n}.html''>new window</span>
+          </div>
+          <iframe id='FL${n}' src='./flexbox/lesson${n}.html'></iframe>
+        </li>`;
+      }
+      $("#FLEXlessonlist").append(Fels);
+
+      const gridlessons = [
+        "GRID"
+      ];
+
+      var Gels = "";
+      for(i=0;i<gridlessons.length;i++){
+        let n = i + 1;
+        Gels += `<li class='lesson'>
+          <div>
+          <a href='#' data-id='GL${n}'>${gridlessons[i]}</a>
+          <span href='#' class='newwin' data-href='./cssgrid/lesson${n}.html''>new window</span>
+          </div>
+          <iframe class='large' id='GL${n}' src='./cssgrid/lesson${n}.html'></iframe>
+        </li>`;
+      }
+      $("#GRIDlessonlist").append(Gels);
+
+
+      $("a").on("click", function(e){
+        e.preventDefault();
+        let which = $(this).attr("data-id");
+        $("#"+which).slideToggle();
+      });
+
+      $("span.newwin").on("click", function(){
+        let winsrc = $(this).attr("data-href");
+        window.open(winsrc);
+      });
+
+    });
+  </script>
+</footer>
+
+</html>

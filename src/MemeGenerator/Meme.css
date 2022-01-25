@@ -1,0 +1,147 @@
+:root{
+    font-size:10px;
+    font-family: Karla, sans-serif;
+    color: #000;
+    --pagebg: #e5e5e5;
+    --popcolor: #F55A5A;
+  }
+  
+  *, ::before, ::after{
+    box-sizing: border-box;
+  }
+
+  html#MEME body.MEME{
+      background-color: var(--pagebg);
+      margin:5rem auto;
+  }
+
+  html#MEME body.MEME #container{
+      width: 55rem;
+      min-height: 50rem;
+      margin:auto;
+      background-color: ivory;  
+      border-radius: 1.2rem;    
+      overflow:hidden;
+      box-shadow: 0 1px 3px 3px rgb(209, 209, 209);
+  }
+
+  html#MEME body.MEME header{
+      padding: 1.8rem;    
+      display:flex;
+      flex-direction: row;
+      color: #fff;  
+      gap: 0.6rem;
+      font-size: 1.2rem; 
+      justify-content: space-between;        
+  }
+
+  html#MEME body.MEME header img{
+     width: 3.2rem;
+     display: inline-block;
+     margin-right: 1rem;
+  }
+
+  html#MEME body.MEME header>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  html#MEME body.MEME header .projecttitle{
+      font-size:2rem;
+  }
+
+  html#MEME body.MEME header.purplegrad{
+    background-image: linear-gradient(to right, #672280, #A626D3);
+    color:#fff;
+  }
+
+  html#MEME body.MEME #main{
+      padding:4rem;
+  }
+
+  html#MEME body.MEME .flexrowbetween{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  html#MEME body.MEME #form{
+      margin-bottom: 3rem;      
+  }
+
+  html#MEME body.MEME input{
+    font-family: Karla;
+  }
+
+  html#MEME body.MEME input[type=text]{
+      font-size:1.5rem;
+      border-radius: .5rem;
+      padding:1rem;
+      border:1px solid #ccc;
+      width: 48%;
+  }
+
+  html#MEME body.MEME button.purplebutton{
+    border:0;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 1.5rem;
+    width:100%;
+    cursor: pointer;      
+    background-image: linear-gradient(to right, #672280, #A626D3);
+    color:#fff;
+  }
+
+  html#MEME body.MEME #memedisplay{
+      position: relative;
+  }
+
+  html#MEME body.MEME #memename{
+      font-size:1.5rem;
+      font-style: italic;
+  }
+
+  html#MEME body.MEME #memetoptext, body.MEME #memebottext{
+      position:absolute;
+      width: 100%;
+      font-size:4rem;
+      font-family: Impact;
+      text-transform: uppercase;
+      color:#fff;
+      -webkit-text-stroke: 2px #000;
+      -webkit-text-fill-color: #fff;
+    text-align: center;
+  }
+
+  html#MEME body.MEME #memetoptext{
+      top:1.2rem;
+  }
+
+  html#MEME body.MEME #memebottext{
+      bottom: 1.2rem;
+  }
+
+  html#MEME body.MEME #memedisplay img{
+    width:100%;
+  }
+
+  /** View Code Bug **/
+html#MEME body.MEME .viewcodeicon{
+  position:fixed;
+  right:3rem;
+  bottom:4rem;
+  display: flex;
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: #ffffff;  
+  box-shadow: -1px -1px 2px #777;  
+  color: #000;
+  cursor: pointer;
+}
+
+html#MEME body.MEME .viewcodeicon img{
+  display:inline-block;
+  width:3rem;
+}

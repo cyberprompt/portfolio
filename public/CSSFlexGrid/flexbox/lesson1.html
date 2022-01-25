@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flexbox : flex-direction</title>
+    <meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        display: flex;
+        flex-direction: row; /* default behavior */
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p>
+      <h2>display flex <button data-option="display toggle">Toggle</button></h2>
+      <input type="radio" name="elements" data-option="4" checked/>less elements
+      <input type="radio" name="elements" data-option="19"/>more elements
+    </p>
+
+    <main>
+
+    <ul id="csstarget">
+      <!-- populated on load and button clicks -->
+    </ul>
+
+    </main>
+  </body>
+
+  <footer>
+    <h2>flex-direction</h2>
+      <button data-option="flex-direction row">flex-direction: row</button>
+      <button data-option="flex-direction row-reverse">flex-direction: row-reverse</button>
+      <button data-option="flex-direction column">flex-direction: column</button>
+      <button data-option="flex-direction column-reverse">flex-direction: column-reverse</button>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../common.css" >
+  <script>
+    $(function(){
+      // init css target with elements
+      const initcount = 4;
+      const numnames = ["one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
+
+      var initElements = function(n){
+        let csstarget = $("#csstarget");
+        let els = "";
+        for(let i=0; i<=n; i++){
+          els += "<li>" + numnames[i] + "</li>";
+        }
+        csstarget.html(els);
+      };
+      initElements(initcount);
+
+      $("button").on("click", function(e){
+        e.preventDefault();
+        let csstarget = $("#csstarget");
+        let cssArray = $(this).attr("data-option").split(" ");
+        if(cssArray[1] == "toggle"){
+          let targetdisplay = csstarget.css("display");
+          let changedisplay = targetdisplay == "flex" ? "inherit" : "flex";
+          csstarget.css(cssArray[0],changedisplay);
+        }else{
+          csstarget.css(cssArray[0],cssArray[1]);
+        }
+      });
+
+      $("input[type=radio]").on("click", function(){
+        let els = $(this).attr("data-option") * 1;
+        initElements(els);
+      });
+
+    });
+  </script>
+
+</html>

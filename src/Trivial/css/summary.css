@@ -1,0 +1,79 @@
+/** Game Summary Screen **/
+
+#summaryscreen{
+    position: fixed;
+    margin: auto;
+    border: 2px solid var(--accentcolor);
+    background-color: #fff;
+    width: clamp(16rem, 90vw, 60rem);
+    /*height: clamp(16rem, 40vh, 50rem);*/
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;   
+    border-radius: 1rem;    
+    opacity:0;      
+    overflow: hidden;
+    animation: fadeIn ease-out 2s;
+    animation-delay: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;    
+}
+
+#summaryscroll{
+    height:inherit;
+    overflow-y: auto; 
+}
+
+#summaryscroll h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+#summarycontent{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    top: 1rem;;
+    left: 0;
+    width: 99%;
+    text-align: center;
+    padding:0 2rem 2rem 2rem;   
+    gap:5rem;
+    margin: auto;
+}
+
+#summarycontent h3{
+    font-size: 1.8rem;
+    color: var(--accentcolor);
+    margin:0 0 1rem 0;
+}
+
+#playerstats, #playertotals{
+    display: flex;
+    flex-direction: column;
+    gap:0rem;
+    font-size: 2.2rem;
+    margin: 0 auto;
+    margin-bottom:2rem;
+    width: 50%;
+}
+
+#playerstats div, #playertotals div{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 3rem;
+    text-align: left;
+}
+
+#playerstats.stored{
+    font-size: 1.8rem;
+}
+
+#summarybuttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content: center;
+    margin-bottom:3rem;
+}

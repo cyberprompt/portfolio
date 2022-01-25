@@ -1,0 +1,72 @@
+{
+    "reactlinks":[
+        {
+            "id": "intro",
+            "type": "react",
+            "link": "/Intro/IntroAppINTRO",
+            "text": "Intro Page",
+            "summary": "All about Ed Murphy. The below projects are both React and Standard applications. All made seperately and combined into one React application using React Router v6.",
+            "icons":["react-icon.png","react-router-icon.png"]
+        },
+        {
+            "id": "travel",
+            "type": "react",
+            "link": "/TravelJournal/TravelAppTRAVEL",
+            "text": "Travel Journal",
+            "summary": "Simple example of recreating a design from Figma.com using components. Also, real places I've visited",
+            "icons":["react-icon.png","html5-icon.png"]
+        },
+        {
+            "id": "meme",
+            "type": "react",
+            "link": "/MemeGenerator/MemeAppMEME",
+            "text": "Meme Generator",
+            "summary": "Fun 'ImageFlip.com' type of app demonstrating consuming remote JSON data.",
+            "icons":["react-icon.png","js-icon.png"]
+        },
+        {
+            "id": "md",
+            "type": "react",
+            "link": "/MarkdownEditor/MarkdownAppMD",
+            "text": "Markdown Editor",
+            "summary": "Example of importing and modifying an existing project with new functionality.",
+            "icons":["react-icon.png","js-icon.png"]
+        },
+        {
+            "id": "tenzies",
+            "type": "react",
+            "link": "/Tenzies/TenziesAppTENZIES",
+            "text": "Tenzies Game",
+            "summary": "Small game of matching numbers showing STATE, Array Filtering, random MATH and user interaction with a fun ending.",
+            "icons":["react-icon.png","js-icon.png","css3-icon.png"]
+        },
+        {
+            "id": "trivial",
+            "type": "react",
+            "link": "/Trivial/TrivialAppTRIVIAL",
+            "text": "Trivia Game",
+            "summary": "My latest project using Form input, localStorage, state, effect, remote JSON calls and lots of animation.",
+            "icons":["react-icon.png","js-icon.png","css3-icon.png"]
+        }                
+    ],
+    "divider":[
+        {
+            "id": "divider",
+            "type": "divider",
+            "link": "",
+            "text": "Non-React Projects",
+            "summary": "",
+            "icons":[]
+        }        
+    ],    
+    "htmllinks":[
+        {
+            "id": "flexgrid",
+            "type": "html",
+            "link": "/CSSFlexGrid/index.html",
+            "text": "CSS Flex & Grid",
+            "summary": "Example of an app I sometimes make for myself when learning a new feature. Not for the public, just my own education. Heavy use of jQuery.",
+            "icons":["html5-icon.png","jquery-icon.png"]
+        }        
+    ]
+}

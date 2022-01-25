@@ -1,0 +1,122 @@
+/** Header styles **/
+html#TRIVIAL body.TRIVIAL header{
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--accentcolor);
+    color:var(--lighttext);
+    top:0;
+    left: 3rem;
+    width:100%;
+    height: 10rem;
+    padding:0;
+    margin-bottom: 8rem;
+    z-index: 10;
+    user-select: none;
+}
+
+html#TRIVIAL body.TRIVIAL header #playername{
+    font-size:3rem; 
+    font-weight: bold;   
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+html#TRIVIAL body.TRIVIAL header #playername:hover{
+    color: var(--win);
+}
+
+html#TRIVIAL body.TRIVIAL header h1{
+    margin:2rem 4rem;
+    cursor: pointer;
+}
+
+html#TRIVIAL body.TRIVIAL #playerinfomenu{
+    display: none;
+}
+html#TRIVIAL body.TRIVIAL #menuicon{
+    width:6rem;
+}
+
+html#TRIVIAL body.TRIVIAL #playerinfobox{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 2rem;
+    background-color: var(--lighttext);
+    color: var(--accentcolor);
+    border-radius: .5rem;
+    border:3px solid #fff;
+    box-shadow: inset 2px 2px var(--medaccentcolor),inset -2px -2px var(--medaccentcolor) ;
+    margin:1.2rem 4rem;
+    align-items: center;
+    gap:2rem;
+}
+
+html#TRIVIAL body.TRIVIAL #gameinfodisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+html#TRIVIAL body.TRIVIAL .gameinforow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    line-height: 1.6rem;
+    gap:1rem;
+}
+
+html#TRIVIAL body.TRIVIAL .gameinforow span{ font-weight: bold;}
+
+html#TRIVIAL body.TRIVIAL #playersettings{
+    opacity:0;
+    overflow: hidden;
+    display: none;
+}
+
+html#TRIVIAL body.TRIVIAL #playersettings.show{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    line-height: 1.6rem;
+    animation: fadeIn ease-in-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;      
+}
+html#TRIVIAL body.TRIVIAL #playersettings h4{
+    text-align: center;
+}
+html#TRIVIAL body.TRIVIAL #playersettings *{
+    margin:inherit;
+}
+html#TRIVIAL body.TRIVIAL #playersettings div:hover{
+    color: var(--errcolor);
+    cursor: pointer;
+}
+html#TRIVIAL body.TRIVIAL #playersettings img{
+    width:1rem;
+}
+
+/** mobile styles **/
+@media screen and (max-width:640px) {
+
+    html#TRIVIAL body.TRIVIAL #playerinfomenu{
+        display:block;
+        margin:2rem 3.5rem 0 0;
+        cursor: pointer;        
+    }
+
+    html#TRIVIAL body.TRIVIAL #playerinfobox{
+        display: none;
+    }
+
+    html#TRIVIAL body.TRIVIAL #playerinfobox.show{
+        display: flex;
+        position:absolute;
+        justify-content: space-between;
+        top:7rem;
+        left:3rem;
+        margin:0;
+        padding:1.4rem;
+    }
+
+}
